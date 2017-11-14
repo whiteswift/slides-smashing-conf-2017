@@ -15,7 +15,7 @@
 	<!-- Printing and PDF exports -->
 	<style>
 		.emoji {
-			font-size: 2em;
+			font-size: 2em !important;
 		}
 
 		.stretch {
@@ -64,13 +64,13 @@
 				<h2>How do we work with each other</h2>
 			</section>
 			<section>
-				<h2>Basically, make a design system so that it promotes:</h2>
+				<h2>Basically, make a design system and it will promote:</h2>
 				<ul>
 					<li>UI consistency and cohesion</li>
 					<li>Faster time to production</li>
 					<li>Shared vocabulary</li>
-					<li>Easier to test</li>
-					<li>Useful to reference</li>
+					<li>Easier testing</li>
+					<li>Useful referencing</li>
 					<li>Future-friendly foundation</li>
 				</ul>
 			</section>
@@ -87,54 +87,128 @@
 				</ul>
 			</section>
 			<section data-background-image="assets/barcelona/designtoken.png">
+				<!-- Our design tokens are in Zeplin. -->
 			</section>
 
 			<section>
-				<h2>Sarah Drasner</h2>
+				<h3>Sarah Drasner / Stephanie Walter / Chris Lilley</h3>
 				<br />
-				<h2>Animating with Vue</h2>
+				<h3>Cheating UX</h3>
 			</section>
 			<section>
-				<h2>Why we animate</h2>
+				<h2>Why are mirrors in lifts?</h2>
+				<br />
+				<img src='assets/barcelona/lift.gif'>
+			</section>
+			<section>
+				<ol>
+					<li>Claustrophobia</li>
+					<li class='fragment highlight-green'>Boredom</li>
+				</ol>
+			</section>
+			<section>
+				<h2>Why do we animate?</h2>
+				<br />
 				<h3 class='fragment fade-up'>The attention span of a user is only 2 seconds...</h3>
 			</section>
+
 			<section>
-				<h2>Amazon</h2>
+				<h3>Amazon</h3>
+				<br />
 				<p class='fragment fade-up'>"For every one second delay, conversions dropped by 7%. If you sell $100k per day, that’s an annual loss of $2.5m."</p>
 			</section>
 			<section>
-				<h2>Wallmart</h2>
+				<h3>Wallmart</h3>
+				<br />
 				<p class='fragment fade-up'>"Gains 1% revenue increase for every 100ms of improvement. 💵"</p>
 			</section>
 			<section>
-				<h2>Ericsson</h2>
+				<h3>Ericsson</h3>
+				<br />
 				<p class='fragment fade-up'>"Anything loading over 4 seconds: HORROR 😱"</p>
 			</section>
-			<section>
-				<h2>Perceived Performance Wins</h2>
-				<p class='fragment fade-up'>Humans over-estimate passive waits by 36%</p>
+			<section data-background-image="assets/barcelona/horror.gif">
 			</section>
 			<section>
-				<h2>Novel waiting experiences make people wait longer - don't use a standard loading spinner</h2>
+				<h3>Perceived Perf Wins 🚀</h3>
+				<br />
+				<p class='fragment fade-up'>(because humans over-estimate passive waits by 36%)</p>
+			</section>
+			<section>
+				<h2>Novel waiting experiences
+					<span class='fragment fade-up'>make</span>
+					<span class='fragment fade-up'>people</span>
+					<span class='fragment fade-up'>wait</span>
+					<span class='fragment fade-up'>longer</span>
+				</h2>
+				<br />
+				<p class='fragment fade-up'>don't use a standard loading spinner</p>
+				<img class='fragment fade-up' src='assets/barcelona/loading.gif'>
+				<!-- TODO: Trainline loading animation -->
+			</section>
+			<section>
+				<h2>Use a branded loading animation</h2>
+				<br />
+				<img class='fragment fade-up' src='assets/barcelona/brandedLoading.gif'>
 				<!-- TODO: Trainline loading animation -->
 			</section>
 			<section>
 				<h2>Lots of short animations are perceived as long</h2>
 				<h2 class='fragment fade-up'>... but one long animation becomes shorter.</h2>
-				<!-- TODO find dot dot dot dash long animation -->
 			</section>
-
-
 			<section>
-				<h2>Chris Lilley</h2>
+				<img src='assets/barcelona/lsvssmall.PNG'>
+			</section>
+			<section>
+				<h3>Younger audiences are more demanding</h3>
+				<span class='emoji'>🙇</span>
+				<p>and will not wait as long as</p>
+				<span class='emoji'>👴🏻</span>
+			</section>
+			<section>
+				<img src='assets/barcelona/youngold.png'>
+			</section>
+			<section>
+				<h3>Calm users wait longer</h3>
+			</section>
+			<section>
+				<img src='assets/barcelona/feelings.png'>
+			</section>
+			<section>
+				<h3>Trust your APIs</h3>
 				<br />
-				<h2>Cheating UX</h2>
+				<p class='fragment fade-up'>Provide optimimistic, instant feeback to the user where appropriate.</p>
 			</section>
 			<section>
-				<h2>Younger audience is more demanding</h2>
-				<h2>Not willing to wait as long</h2>
+				<video autoplay src='assets/barcelona/twitterlike.mp4' />
 			</section>
-	
+			<section>
+				<h3>Ideal Interface Response Guide</h3>
+				<br />
+				<table>
+					<thead>
+						<tr>
+							<th>Duration ⏱</th>
+							<th>Action 🏃</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>0 - 300ms</td>
+							<td>Provide Instant UI feedback</td>
+						</tr>
+						<tr>
+							<th>300ms - 1 second</th>
+							<td>Delay is tolerable</td>
+						</tr>
+						<tr>
+							<th>2 - 5 seconds</th>
+							<td>Display loading animation</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
 
 			<section>
 				<h2>Anton & Irene</h2>
@@ -147,18 +221,31 @@
 			<section>
 				<h2>top tips</h2>
 				<ul>
-					<li class='fragment fade-up'>it's OK to steal from other disciplines - never you're own <span class='fragment fade-up'>(if you're a designer 👀)</span></li>
-					<li class='fragment fade-up'>upskill on youtube</li>
+					<li class='fragment fade-up'>it's OK to steal from other disciplines - never you're own</li>
+					<!-- ^ From a design perspective maybe, but if something is MIT licenced as a dev you can work on it. -->
+					<li class='fragment fade-up'>don't forget you can upskill on youtube</li><!-- Paid training websites aren't the only education resource -->
 					<li class='fragment fade-up'>don't be afraid to ask - you already have a no, but you might get a yes.</li>
 				</ul>
 			</section>
 
 			<section>
-				<h2>Tyler Sticka</h2>
+				<h2>Tyler Sticka</h2><nr />
+				<h2>Don't use icon fonts</h2>
+			</section>
+			<section>
+				<h3>When they fail - they expose whatever unicode they were mapped to</h3>
+			</section>
+			<section>
+				<h3>Which can fail too</h3>
+				<h3>  </h3>
+			</section>
+			<section>
+				<h3>or display something completely unexpected...</h3>
+				<h3>⭐️️️️️️️️️⭐️⭐️️️️️️️️️⭐️🐴</h3>
 			</section>
 
 			<section>
-					foit_fout.JPG
+				foit_fout.JPG
 			</section>
 
 			<section>
@@ -177,17 +264,7 @@
 
 			<section>
 				<ul>
-					<li>
-						1.5 billion users per month
-					</li>
-					<br/>
-					<li>
-						1+ billion hours watched per day
-						<br/>( 114,000 years )
-					</li>
-					<br/>
-					<li>
-						< 2s to load a video </li>
+
 				</ul>
 			</section>
 
