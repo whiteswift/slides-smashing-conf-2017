@@ -60,8 +60,7 @@
 
 			<section>
 				<h2>Brad Frost</h2>
-				<br />
-				<h2>How do we work with each other</h2>
+				How do we work with each other
 			</section>
 			<section>
 				<h2>Basically, make a design system and it will promote:</h2>
@@ -91,9 +90,8 @@
 			</section>
 
 			<section>
-				<h3>Sarah Drasner / Stephanie Walter / Chris Lilley</h3>
-				<br />
-				<h3>Cheating UX</h3>
+				<h3>Sarah Drasner</h3>
+				Cheating UX
 			</section>
 			<section>
 				<h2>Why are mirrors in lifts?</h2>
@@ -153,8 +151,8 @@
 				<!-- TODO: Trainline loading animation -->
 			</section>
 			<section>
-				<h2>Lots of short animations are perceived as long</h2>
-				<h2 class='fragment fade-up'>... but one long animation becomes shorter.</h2>
+				<h3>Lots of short animations are perceived as long</h3>
+				<h3 class='fragment fade-up'>... but one long animation becomes shorter.</h3>
 			</section>
 			<section>
 				<img src='assets/barcelona/lsvssmall.PNG'>
@@ -164,6 +162,7 @@
 				<span class='emoji'>🙇</span>
 				<p>and will not wait as long as</p>
 				<span class='emoji'>👴🏻</span>
+				<!-- Whats the average age of our users? -->
 			</section>
 			<section>
 				<img src='assets/barcelona/youngold.png'>
@@ -177,7 +176,7 @@
 			<section>
 				<h3>Trust your APIs</h3>
 				<br />
-				<p class='fragment fade-up'>Provide optimimistic, instant feeback to the user where appropriate.</p>
+				<p class='fragment fade-up'>Provide optimimistic, instant feeback to the user (where appropriate 👀)</p>
 			</section>
 			<section>
 				<video autoplay src='assets/barcelona/twitterlike.mp4' />
@@ -188,8 +187,8 @@
 				<table>
 					<thead>
 						<tr>
-							<th>Duration ⏱</th>
-							<th>Action 🏃</th>
+							<th>DURATION ⏱</th>
+							<th>ACTION 🏃</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -208,7 +207,6 @@
 					</tbody>
 				</table>
 			</section>
-
 
 			<section>
 				<h2>Anton & Irene</h2>
@@ -230,7 +228,7 @@
 
 			<section>
 				<h2>Tyler Sticka</h2><nr />
-				<h2>Don't use icon fonts</h2>
+				Don't use icon fonts
 			</section>
 			<section>
 				<h3>When they fail - they expose whatever unicode they were mapped to</h3>
@@ -245,33 +243,66 @@
 			</section>
 
 			<section>
-				foit_fout.JPG
+				<h2>Monica Dinculescu</h2>
+				Fontastic Web Performance
 			</section>
 
 			<section>
-				<div class="fragment fade-up">
-					<br/>
-					<pre><code data-trim data-noescape>
-					// package.json
-					{
-						"flat": true
-					}
-					</code></pre>
-					<br/>
-					<a href='https://yarnpkg.com/lang/en/docs/package-json/'>yarnpkg.com/lang/en/docs/package-json/</a>
-				</div>
+				68% of websites use web fonts
+			</section>
+			
+			<section>
+				<!-- This is a font face definition and how you use it -->
+				How we use font face
+				<img src='assets/barcelona/fontface.jpg'>
 			</section>
 
 			<section>
+				The problem with loading web fonts is </br>
+				they are render blocking mate
+			</section>
+	
+			<section>
+				<!-- The parser will get to the definition and traditionally have a FOIT. -->
+				FOIT vs FOUT
+				<img src='assets/barcelona/fout_foit.png'>
+			</section>
+
+			<section>
+				Font Display Strategy
+				<img src='assets/barcelona/font-display.png'>
+			</section>
+
+			<section>
+				<video autoplay loop src='assets/barcelona/font-loading-comparison.mp4'>
+			</section>
+
+			<section>
+				Link rel="preload"
+				<img src='assets/barcelona/preload.png'>
+			</section>
+			
+			<section>
+				Font face observer
+				<img src='assets/barcelona/ffo1.png'>
+				<img src='assets/barcelona/ffo2.png'>
+			</section>
+
+			<section>
+				<h2>Top tips</h2>
 				<ul>
-
+					<li>🐞 Don't use / limit web fonts</li>
+					<li>🐝 Use .woff2 font files</li>
+					<li>🐐 Use a font-display strategy</li>
+					<li>🐕 Preload the font</li>
+					<li>🦍 Only use the character range you need</li>
+					<li>🦏 Use font face observer for more control</li>
 				</ul>
 			</section>
 
 			<section>
-				<div>
-					<iframe class='stretch' data-src="https://custom-elements-everywhere.com/"></iframe>
-				</div>
+				Thanks!<br/>
+				<img src='assets/barcelona/horror.gif'>
 			</section>
 
 			<section>
