@@ -36,6 +36,14 @@
 		.fight>span {
 			padding: 0px 30px;
 		}
+
+		.customtable {
+    		font-size: 0.8em !important;
+		}
+
+		.customtable tr {
+			padding: 0.4em 0.5em 0.7em 0.7em !important;
+		}
 	</style>
 	<script>
 		var link = document.createElement('link');
@@ -60,7 +68,7 @@
 
 			<section>
 				<h2>Brad Frost</h2>
-				How do we work with each other
+				How do we work with each other 
 			</section>
 			<section>
 				<h2>Basically, make a design system and it will promote:</h2>
@@ -107,7 +115,7 @@
 			<section>
 				<h2>Why do we animate?</h2>
 				<br />
-				<h3 class='fragment fade-up'>The attention span of a user is only 2 seconds...</h3>
+				<p class='fragment fade-up'>The attention span of a user is only 2 seconds...</p>
 			</section>
 
 			<section>
@@ -125,34 +133,72 @@
 				<br />
 				<p class='fragment fade-up'>"Anything loading over 4 seconds: HORROR 😱"</p>
 			</section>
+			<!-- So basically anything over 4 seconds is unacceptable and is horror for the brain -->
 			<section data-background-image="assets/barcelona/horror.gif">
 			</section>
 			<section>
 				<h3>Perceived Perf Wins 🚀</h3>
 				<br />
-				<p class='fragment fade-up'>(because humans over-estimate passive waits by 36%)</p>
+				<!-- <p class='fragment fade-up'>Humans over-estimate passive waits by 36%</p> -->
 			</section>
 			<section>
-				<h2>Novel waiting experiences
+				<h3>Humans over-estimate passive waits by 36%</h3>
+				<br />
+				<p class='fragment fade-up'>Novel waiting experiences
 					<span class='fragment fade-up'>make</span>
 					<span class='fragment fade-up'>people</span>
 					<span class='fragment fade-up'>wait</span>
 					<span class='fragment fade-up'>longer</span>
-				</h2>
-				<br />
-				<p class='fragment fade-up'>don't use a standard loading spinner</p>
-				<img class='fragment fade-up' src='assets/barcelona/loading.gif'>
+				</p>
+			</section>
+			<section>
+				<h2>Don't use a standard loading spinner</h2>
+				<img src='assets/barcelona/loading.gif'>
 				<!-- TODO: Trainline loading animation -->
 			</section>
 			<section>
 				<h2>Use a branded loading animation</h2>
 				<br />
-				<img class='fragment fade-up' src='assets/barcelona/brandedLoading.gif'>
+				<img src='assets/barcelona/brandedLoading.gif'>
 				<!-- TODO: Trainline loading animation -->
 			</section>
 			<section>
+				<!-- These animations seem elaborate so how do we make one easily? -->
+				<h3>How can you make something to animate?</h3>
+				<ol>
+					<li class='fragment fade-up'>Get an SVG</li>
+					<li class='fragment fade-up'>Has to have a stroke, dash offset, maybe dasharray</li>
+					<li class='fragment fade-up'>Animate dash offset with keyframes</li>
+				</ol>
+				<!-- And if that was hard to understand it's because I want to sound smart -->
+			</section>
+			<section>
+				<pre>
+					<code>
+						<svg ...>
+							<path class="path" stroke="#000000" ... >
+						</svg>
+						.path {
+							stroke-dasharray: 1000;
+							stroke-dashoffset: 1000;
+							animation: dash 5s linear forwards;
+						}
+						
+						@keyframes dash {
+							to {
+								stroke-dashoffset: 0;
+							}
+						}
+					</code>
+				</pre>	
+				<!-- Show demo of dash offset  -->
+				<!-- This will be useful because we know how slow websphere is right? -->
+			</section>
+			<section>
 				<h3>Lots of short animations are perceived as long</h3>
-				<h3 class='fragment fade-up'>... but one long animation becomes shorter.</h3>
+				<br />
+				<p class='fragment fade-up'>... but one long animation becomes shorter.</p>
+				<!-- So imagine the animation is a game of hangman -->
 			</section>
 			<section>
 				<img src='assets/barcelona/lsvssmall.PNG'>
@@ -184,7 +230,7 @@
 			<section>
 				<h3>Ideal Interface Response Guide</h3>
 				<br />
-				<table>
+				<table class="customtable">
 					<thead>
 						<tr>
 							<th>DURATION ⏱</th>
@@ -198,7 +244,7 @@
 						</tr>
 						<tr>
 							<th>300ms - 1 second</th>
-							<td>Delay is tolerable</td>
+							<td>Delay is tolerable - do nothing</td>
 						</tr>
 						<tr>
 							<th>2 - 5 seconds</th>
@@ -208,7 +254,7 @@
 				</table>
 			</section>
 
-			<section>
+			<!-- <section>
 				<h2>Anton & Irene</h2>
 				<br />
 				<h2>Real work / life balance in the studio</h2>
@@ -220,18 +266,18 @@
 				<h2>top tips</h2>
 				<ul>
 					<li class='fragment fade-up'>it's OK to steal from other disciplines - never you're own</li>
-					<!-- ^ From a design perspective maybe, but if something is MIT licenced as a dev you can work on it. -->
-					<li class='fragment fade-up'>don't forget you can upskill on youtube</li><!-- Paid training websites aren't the only education resource -->
+					From a design perspective maybe, but if something is MIT licenced as a dev you can work on it.
+					<li class='fragment fade-up'>don't forget you can upskill on youtube</li>Paid training websites aren't the only education resource
 					<li class='fragment fade-up'>don't be afraid to ask - you already have a no, but you might get a yes.</li>
 				</ul>
-			</section>
+			</section> -->
 
 			<section>
 				<h2>Tyler Sticka</h2><nr />
 				Don't use icon fonts
 			</section>
 			<section>
-				<h3>When they fail - they expose whatever unicode they were mapped to</h3>
+				<p>When they fail they expose<br /> the unicode they were mapped to</p>
 			</section>
 			<section>
 				<h3>Which can fail too</h3>
@@ -305,21 +351,16 @@
 				<img src='assets/barcelona/horror.gif'>
 			</section>
 
-			<section>
-				<h2>Links</h2>
-				<p></p>
-
-				Day 1 Collaborative Google Doc — Day 1 | https://docs.google.com/document/d/1NOIwDEYmB9u102_87_lXk5qv1mQSNQUP0HAr4THY7yM/edit?mc_cid=5b55bbc4a4&mc_eid=957c7ee912
+			<!-- Send email with links -->
+	
+				<!-- Day 1 Collaborative Google Doc — Day 1 | https://docs.google.com/document/d/1NOIwDEYmB9u102_87_lXk5qv1mQSNQUP0HAr4THY7yM/edit?mc_cid=5b55bbc4a4&mc_eid=957c7ee912
 				Barcelona Opening | https://vimeo.com/241156872?mc_cid=5b55bbc4a4&mc_eid=957c7ee912 Brad Frost (Video) (Slides) | https://www.dropbox.com/s/1zbdbh8jmv8y2hk/smashingconf-barcelona-lets-work-together.pdf?dl=0&mc_cid=5b55bbc4a4&mc_eid=957c7ee912
 				Sarah Drasner (Video) (Slides) | http://slides.com/sdrasner/animating-vue-e17?mc_cid=5b55bbc4a4&mc_eid=957c7ee912#/ Stephanie
 				Walter (Slides) | https://blog.stephaniewalter.fr/en/cheating-ux-perceived-performance-and-user-experience/?mc_cid=5b55bbc4a4&mc_eid=957c7ee912
 				Tyler Sticka (Video) (Slides) | http://tylersticka.github.io/slides-svg/?mc_cid=5b55bbc4a4&mc_eid=957c7ee912 Horace Dediu
 				(Video https://vimeo.com/241107531?mc_cid=5b55bbc4a4&mc_eid=957c7ee912) Jeremy Keith (Video) (Slides) | https://adactio.com/extras/slides/evaluatingtechnology.pdf?mc_cid=5b55bbc4a4&mc_eid=957c7ee912
 				Day 2 Collaborative Google Doc — Day 2 | Lea Verou (Video) (Slides) | Denys Mishunov (Video) | Chris Lilley (Video) (Slides)
-				| Marcy Sutton (Video) (Slides) | Paul Boag (Video) (Slides) | Monica Dinculescu (Video) (Slides) |
-
-			</section>
-
+				| Marcy Sutton (Video) (Slides) | Paul Boag (Video) (Slides) | Monica Dinculescu (Video) (Slides) | -->
 		</div>
 	</div>
 
