@@ -9,10 +9,7 @@
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
-
-	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
-	<!-- Printing and PDF exports -->
 	<style>
 		.emoji {
 			font-size: 2em !important;
@@ -65,7 +62,6 @@
 	</style>
 	<script>
 	function toggleDash(element) {
-		// document.getElementById('').
 		element.lastElementChild.classList.toggle('path');
 	}
 	</script>
@@ -83,15 +79,19 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<!-- HI I'm darryl, these slides are like the best bits of smashing conference -->
+				<aside class='notes'> Hi, these slides are like the best bits of smashing conference </aside>
 				<h2>smashing conf 2017 🇪🇸</h2>
 				<h2> 🥓 ☀️ ⛵️ 🍷 </h2>
 			</section>
 
 			<section>
-				<!-- First up is Brad Frost who made a book on atomic design, making things small reusable components -->
+				<aside class='notes'> First up is Brad Frost who made a book on atomic design, making things small reusable components </aside>
 				<h2>Brad Frost</h2>
 				Design systems + How we work + Design tokens
+			</section>
+			<section>
+				<h2>Design System</h2>
+				<img src='assets/barcelona/design-system.jpg'>
 			</section>
 			<section>
 				<h2>Basically, make a design system and it will promote:</h2>
@@ -103,9 +103,7 @@
 					<li>Useful referencing</li>
 					<li>Future-friendly foundation</li>
 				</ul>
-			</section>
-			<section>
-					<img src='assets/barcelona/design-system.jpg'>
+				<aside class='notes'>and this is basically what we have in Zeplin and Hive</aside>
 			</section>
 			<section>
 				<h2>Brads top tips</h2>
@@ -116,11 +114,11 @@
 				</ul>
 			</section>
 			<section data-background-image="assets/barcelona/designtoken.png">
-				<!-- Deisgn tokens are like global variables for design. a h1 in an app isn't a h1 -->
-				<!-- Our design tokens are bascially hive variables. -->
+				<aside class='notes'> Deisgn tokens are like global variables for design. a h1 in an app isn't a h1 </aside>
+				<aside class='notes'> Our design tokens are bascially hive variables. </aside>
 			</section>
 			<section>
-				<!-- So inseason already do this in inseason and ton probably. But design tokens are like global variables but nice -->
+				<aside class='notes'> So inseason already do this in inseason and ton probably. But design tokens are like global variables but nice </aside>
 				<h2>Design Token Properties</h2>
 				<ul>
 					<li>Background colours</li>
@@ -130,7 +128,7 @@
 				</ul>
 			</section>
 			<section>
-				<!-- in CSS variables you could do this -->
+				<aside class='notes'> in CSS variables you could do this </aside>
 				<h2>Design tokens in CSS</h2>
 <pre><code>// design-tokens.css
 :root {
@@ -144,7 +142,7 @@ h1 {
 }</code></pre>
 			</section>
 			<section>
-				<!-- design systems are like batman and robin -->
+				<aside class='notes'> design systems are like batman and robin </aside>
 				<h2>Design system + Design tokens</h2>
 				<br />
 				<img src='assets/barcelona/batman.gif'>
@@ -165,39 +163,44 @@ h1 {
 					<li class='fragment highlight-green'>Boredom</li>
 				</ol>
 			</section>
-			<section>
-				<!-- This ties in to why we animate stuff in apps and on the web -->
-				<h2>Why do we animate?</h2>
-				<br />
-				<p class='fragment fade-up'>The attention span of a user is only 2 seconds...</p>
-				<!-- So this is it. Our attnetion spans are so short -->
-			</section>
+			
 
-			<section><!-- Case studies! -->
+			<section><h2>Why is it important?</h2></section>
+
+			<section><aside class='notes'> Case studies! </aside>
 				<h3>Amazon</h3>
 				<br />
-				<p class='fragment fade-up'>"For every one second delay, conversions dropped by 7%. If you sell $100k per day, that’s an annual loss of $2.5m."</p>
+				<p>"For every one second delay, conversions dropped by 7%. If you sell $100k per day, that’s an annual loss of $2.5m."</p>
 			</section>
 			<section>
 				<h3>Wallmart</h3>
 				<br />
-				<p class='fragment fade-up'>"Gains 1% revenue increase for every 100ms of improvement. 💵"</p>
+				<p>"Gains 1% revenue increase for every 100ms of improvement. 💵"</p>
 			</section>
 			<section>
 				<h3>Ericsson</h3>
 				<br />
-				<p class='fragment fade-up'>"Anything loading over 4 seconds: HORROR 😱"</p>
+				<p>Anything loading over 4 seconds: horror.</p>
 			</section>
-			<!-- So basically anything over 4 seconds is unacceptable and is horror for the brain -->
+			<aside class='notes'> So basically anything over 4 seconds is unacceptable and is horror for the brain </aside>
 			<section data-background-image="assets/barcelona/horror.gif">
 			</section>
+
+			<section>
+				<aside class='notes'> This ties in to why we animate stuff in apps and on the web </aside>
+				<h2>Why do we animate?</h2>
+				<br />
+				<p class='fragment fade-up'>The attention span of a user is only 2 seconds...</p>
+				<aside class='notes'> So this is it. Our attnetion spans are so short </aside>
+			</section>
+			
 			<section>
 				<h3>Perceived Perf Wins 🚀</h3>
 			</section>
 			<section>
 				<h3>Humans over-estimate passive waits by 36%</h3>
 				<br />
-				<!-- So how do you combat this? -->
+				<aside class='notes'> So how do you combat this? </aside>
 				<p class='fragment fade-up'>Novel waiting experiences
 					<span class='fragment fade-up'>make</span>
 					<span class='fragment fade-up'>people</span>
@@ -208,87 +211,31 @@ h1 {
 			<section>
 				<h2>Don't use a loading spinner</h2>
 				<img src='assets/barcelona/loading.gif'>
-				<!-- TODO: Trainline loading animation -->
+				<aside class='notes'> TODO: Trainline loading animation </aside>
 			</section>
 			<section>
 				<h2>Use a branded loading animation</h2>
 				<br />
 				<img src='assets/barcelona/brandedLoading.gif'>
-				<!-- TODO: Trainline loading animation -->
+				<aside class='notes'> TODO: Trainline loading animation </aside>
 			</section>
-			<section>
-				<!-- These animations seem elaborate so how do we make one easily? -->
-				<h3>How can you make something to animate?</h3>
-				<ol>
-					<li class='fragment fade-up'>Get an SVG</li>
-					<li class='fragment fade-up'>Has to have a stroke, dash offset, maybe dasharray</li>
-					<li class='fragment fade-up'>Animate dash offset with keyframes</li>
-				</ol>
-				<!-- And if that was hard to understand it's because I want to sound smart -->
-			</section>
-			<section>
-				<pre>
-					<code data-trim>
-						<svg>
-							<path class="path" stroke="#000000" />
-						</svg>
-
-						.path {
-							stroke-dasharray: 1000;
-							stroke-dashoffset: 1000;
-							animation: dash 5s linear forwards;
-						}
-						
-						@keyframes dash {
-							to {
-								stroke-dashoffset: 0;
-							}
-						}
-
-					</code>
-				</pre>	
-				<!-- Show demo of dash offset  -->
-				<!-- This will be useful because we know how slow websphere is right? -->
-			</section>
-			<section>
-				<iframe class='stretch' data-src="https://jakearchibald.com/2013/animated-line-drawing-svg/"></iframe>
-			</section>
-			<section data-background-color="#fff">
-				<svg onclick="toggleDash(this)" class='half-width' version="1.1" viewBox="0 0 16 16">
-					<!-- <rect transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 16 1.776357e-15)" style="fill:none;" width="16" height="16"/> -->
-					<path class='path' stroke="#000000" stroke-width="0.1" stroke-miterlimit="10" d="M11.696,4c0.507-0.908,0.21-2.063-0.688-2.602C10.095,0.849,8.903,1.145,8.352,2.06L7.499,3.48L6.648,2.063
-						C6.097,1.148,4.906,0.853,3.992,1.401C3.095,1.939,2.797,3.093,3.303,4H0v11h15V4H11.696z M9.21,2.575
-						c0.266-0.442,0.841-0.586,1.284-0.32c0.442,0.266,0.585,0.841,0.32,1.283c-0.17,0.283-0.468,0.452-0.796,0.454H8.359L9.21,2.575z
-							M4.081,2.833c0.061-0.242,0.212-0.447,0.426-0.576C4.95,1.992,5.525,2.137,5.79,2.578l0.851,1.418H4.985
-						c-0.33-0.001-0.628-0.171-0.798-0.454C4.058,3.328,4.02,3.076,4.081,2.833z M1,5h6v4H1V5z M1,14v-4h6v4H1z M14,14H8v-4h6V14z M8,9
-						V5h6v4H8z"/>
-				</svg>
-
-				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				width="340px" height="333px" viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve">
 			
-			 <path class="path" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M66.039,133.545c0,0-21-57,18-67s49-4,65,8
-			   s30,41,53,27s66,4,58,32s-5,44,18,57s22,46,0,45s-54-40-68-16s-40,88-83,48s11-61-11-80s-79-7-70-41
-			   C46.039,146.545,53.039,128.545,66.039,133.545z"/>
-			 
-			</svg>
-			</section>
 			
 			<section>
 				<h3>Lots of short animations are perceived as long</h3>
 				<br />
 				<p class='fragment fade-up'>... but one long animation becomes shorter.</p>
-				<!-- So imagine the animation is a game of hangman -->
+				<aside class='notes'> So imagine the animation is a game of hangman </aside>
 			</section>
 			<section>
-				<img src='assets/barcelona/lsvssmall.PNG'>
+				<img src='assets/barcelona/lsvssmall.png'>
 			</section>
 			<section>
 				<h3>Younger audiences are more demanding</h3>
 				<span class='emoji'>🙇</span>
 				<p>and will not wait as long as</p>
 				<span class='emoji'>👴🏻</span>
-				<!-- Whats the average age of our users? -->
+				<aside class='notes'> Whats the average age of our users? </aside>
 			</section>
 			<section>
 				<img src='assets/barcelona/youngold.png'>
@@ -308,7 +255,7 @@ h1 {
 				<video autoplay src='assets/barcelona/twitterlike.mp4' />
 			</section>
 			<section>
-				<!-- This is a guide on what action to take depending on how long something loads -->
+				<aside class='notes'> This is a guide on what action to take depending on how long something loads </aside>
 				<h3>Ideal Interface Response Guide</h3>
 				<br />
 				<table class="customtable">
@@ -335,37 +282,81 @@ h1 {
 				</table>
 			</section>
 
-			<!-- <section>
-				<h2>Anton & Irene</h2>
-				<br />
-				<h2>Real work / life balance in the studio</h2>
+			<section>
+				<aside class='notes'> These animations seem elaborate so how do we make one easily? </aside>
+				<h3>How can you make something to animate?</h3>
+				<ol>
+					<li class='fragment fade-up'>Get an SVG</li>
+					<li class='fragment fade-up'>Has to have a stroke, dash offset, maybe dasharray</li>
+					<li class='fragment fade-up'>Animate dash offset with keyframes</li>
+				</ol>
+				<aside class='notes'> And if that was hard to understand it's because I want to sound smart </aside>
 			</section>
 			<section>
-				<iframe class='stretch' data-src="http://misplaced.design/"></iframe>
+				<pre>
+					<code data-trim>
+						<svg>
+							<path class="path" stroke="#000000" />
+						</svg>
+
+						.path {
+							stroke-dasharray: 1000;
+							stroke-dashoffset: 1000;
+							animation: dash 5s linear forwards;
+						}
+						
+						@keyframes dash {
+							to {
+								stroke-dashoffset: 0;
+							}
+						}
+
+					</code>
+				</pre>	
+
+				<aside class='notes'> Show demo of dash offset
+					This will be useful because we know how slow websphere is right? </aside>
 			</section>
 			<section>
-				<h2>top tips</h2>
-				<ul>
-					<li class='fragment fade-up'>it's OK to steal from other disciplines - never you're own</li>
-					From a design perspective maybe, but if something is MIT licenced as a dev you can work on it.
-					<li class='fragment fade-up'>don't forget you can upskill on youtube</li>Paid training websites aren't the only education resource
-					<li class='fragment fade-up'>don't be afraid to ask - you already have a no, but you might get a yes.</li>
-				</ul>
-			</section> -->
+				<iframe class='stretch' data-src="https://jakearchibald.com/2013/animated-line-drawing-svg/"></iframe>
+			</section>
+			<section data-background-color="#fff">
+				<svg onclick="toggleDash(this)" class='half-width' version="1.1" viewBox="0 0 16 16">
+
+					<path class='path' stroke="#000000" stroke-width="0.1" stroke-miterlimit="10" d="M11.696,4c0.507-0.908,0.21-2.063-0.688-2.602C10.095,0.849,8.903,1.145,8.352,2.06L7.499,3.48L6.648,2.063
+						C6.097,1.148,4.906,0.853,3.992,1.401C3.095,1.939,2.797,3.093,3.303,4H0v11h15V4H11.696z M9.21,2.575
+						c0.266-0.442,0.841-0.586,1.284-0.32c0.442,0.266,0.585,0.841,0.32,1.283c-0.17,0.283-0.468,0.452-0.796,0.454H8.359L9.21,2.575z
+							M4.081,2.833c0.061-0.242,0.212-0.447,0.426-0.576C4.95,1.992,5.525,2.137,5.79,2.578l0.851,1.418H4.985
+						c-0.33-0.001-0.628-0.171-0.798-0.454C4.058,3.328,4.02,3.076,4.081,2.833z M1,5h6v4H1V5z M1,14v-4h6v4H1z M14,14H8v-4h6V14z M8,9
+						V5h6v4H8z"/>
+				</svg>
+
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				width="340px" height="333px" viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve">
+			
+				<path class="path" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M66.039,133.545c0,0-21-57,18-67s49-4,65,8
+				s30,41,53,27s66,4,58,32s-5,44,18,57s22,46,0,45s-54-40-68-16s-40,88-83,48s11-61-11-80s-79-7-70-41
+				C46.039,146.545,53.039,128.545,66.039,133.545z"/>
+				
+			</svg>
+			</section>
 
 			<section>
 				<h2>Tyler Sticka</h2><nr />
 				Don't use icon fonts
 			</section>
 			<section>
+				<aside class='notes'> like font awesome </aside>
 				<h2>Don't use icon fonts</h2>
 				<p class='fragment fade-up'>When they fail they expose<br /> the unicode they were mapped to</p>
 			</section>
 			<section>
 				<h3>Which can fail too</h3>
 				<h3>  </h3>
+				<p>(bad for accessibility)</p>
 			</section>
 			<section>
+				<aside class='notes'> Etsy horse </aside>
 				<h3>or display something completely unexpected...</h3>
 				<h3>⭐️️️️️️️️️⭐️⭐️️️️️️️️️⭐️🐴</h3>
 			</section>
@@ -380,22 +371,22 @@ h1 {
 			</section>
 
 			<section>
-				68% of websites use web fonts
+				<h2>68% of websites use web fonts</h2>
 			</section>
 			
 			<section>
-				<!-- This is a font face definition and how you use it -->
+				<aside class='notes'> This is a font face definition and how you use it </aside>
 				How we use font face
 				<img src='assets/barcelona/fontface.jpg'>
 			</section>
 
 			<section>
-				When loading web fonts,</br>
-				they render block. 
+				<h3>When loading web fonts,</br>
+					they render block.</h3>
 			</section>
 	
 			<section>
-				<!-- The parser will get to the definition and traditionally have a FOIT. -->
+				<aside class='notes'> The parser will get to the definition and traditionally have a FOIT. </aside>
 				FOIT vs FOUT
 				<img src='assets/barcelona/fout_foit.png'>
 			</section>
@@ -437,16 +428,6 @@ h1 {
 				<img src='assets/barcelona/horror.gif'>
 			</section>
 
-			<!-- Send email with links -->
-	
-				<!-- Day 1 Collaborative Google Doc — Day 1 | https://docs.google.com/document/d/1NOIwDEYmB9u102_87_lXk5qv1mQSNQUP0HAr4THY7yM/edit?mc_cid=5b55bbc4a4&mc_eid=957c7ee912
-				Barcelona Opening | https://vimeo.com/241156872?mc_cid=5b55bbc4a4&mc_eid=957c7ee912 Brad Frost (Video) (Slides) | https://www.dropbox.com/s/1zbdbh8jmv8y2hk/smashingconf-barcelona-lets-work-together.pdf?dl=0&mc_cid=5b55bbc4a4&mc_eid=957c7ee912
-				Sarah Drasner (Video) (Slides) | http://slides.com/sdrasner/animating-vue-e17?mc_cid=5b55bbc4a4&mc_eid=957c7ee912#/ Stephanie
-				Walter (Slides) | https://blog.stephaniewalter.fr/en/cheating-ux-perceived-performance-and-user-experience/?mc_cid=5b55bbc4a4&mc_eid=957c7ee912
-				Tyler Sticka (Video) (Slides) | http://tylersticka.github.io/slides-svg/?mc_cid=5b55bbc4a4&mc_eid=957c7ee912 Horace Dediu
-				(Video https://vimeo.com/241107531?mc_cid=5b55bbc4a4&mc_eid=957c7ee912) Jeremy Keith (Video) (Slides) | https://adactio.com/extras/slides/evaluatingtechnology.pdf?mc_cid=5b55bbc4a4&mc_eid=957c7ee912
-				Day 2 Collaborative Google Doc — Day 2 | Lea Verou (Video) (Slides) | Denys Mishunov (Video) | Chris Lilley (Video) (Slides)
-				| Marcy Sutton (Video) (Slides) | Paul Boag (Video) (Slides) | Monica Dinculescu (Video) (Slides) | -->
 		</div>
 	</div>
 
