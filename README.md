@@ -1,4 +1,4 @@
-# Image Resizer Presentation
+# Smashing conf presentation
 
 ## Slides Preview
 
