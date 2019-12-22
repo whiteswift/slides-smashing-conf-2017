@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>smashing conf 🇩🇰</title>
+	<title>smashing conf</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
@@ -80,8 +80,8 @@
 		<div class="slides">
 			<section>
 				<aside class='notes'> Hi, these slides are like the best bits of smashing conference </aside>
-				<h2>smashing conf </h2>
-				<h2> 🍅🍅🍅🍅 </h2>
+				<h2>smashing conf</h2>
+				<h2> 🖥 ✍️ 🍅 🧠 👩‍🔬 </h2>
 			</section>
 
 			<section>
@@ -104,6 +104,10 @@
 					<li>Future-friendly foundation</li>
 				</ul>
 				<aside class='notes'>and this is basically what we have in Zeplin and Hive</aside>
+			</section>
+			<section>
+				<h2>Design guide ... guide</h2>
+				<a target="_blank" href='https://bradfrost.github.io/style-guide-guide/getting-started.html'>https://bradfrost.github.io/style-guide-guide/getting-started.html</a>
 			</section>
 			<section>
 				<h2>Brads top tips</h2>
@@ -132,13 +136,13 @@
 				<h2>Design tokens in CSS</h2>
 <pre><code>// design-tokens.css
 :root {
- --primary-heading: 24px;
+	--primary-heading: 24px;
 }</code></pre>
 
 <pre><code>@import "design-tokens.css";
-	
+
 h1 { 
- font-size: var(--primary-heading);
+	font-size: var(--primary-heading);
 }</code></pre>
 			</section>
 			<section>
@@ -151,15 +155,19 @@ h1 {
 			<section>
 				<h3>Sarah Drasner</h3>
 				Cheating UX
+
+				<aside class='notes'>Head of Developer Experience at Netlify</aside>
 			</section>
 			<section>
 				<h3>Firstly: Why are mirrors in lifts?</h3>
 				<br />
 				<img src='assets/barcelona/lift.gif'>
+				<aside class='notes'> Apartment block in new york, tenants complain the lift takes too long.</aside>
 			</section>
 			<section>
 				<ol>
 					<li>Claustrophobia</li>
+					<li>Safety</li>
 					<li class='fragment highlight-green'>Boredom</li>
 				</ol>
 			</section>
@@ -167,7 +175,8 @@ h1 {
 
 			<section><h2>Why is it important?</h2></section>
 
-			<section><aside class='notes'> Case studies! </aside>
+			<section>
+				<aside class='notes'> Case studies! </aside>
 				<h3>Amazon</h3>
 				<br />
 				<p>"For every one second delay, conversions dropped by 7%. If you sell $100k per day, that’s an annual loss of $2.5m."</p>
@@ -189,7 +198,8 @@ h1 {
 			<section>
 				<aside class='notes'> This ties in to why we animate stuff in apps and on the web </aside>
 				<h2>Why do we animate?</h2>
-				<h3 class='fragment fade-up'>Because our attentions spans are short!</h3>
+				<h3 class='fragment fade-up'>Because our attentions spans are short!<br/><br/>😒🤳</h3>
+				
 				<aside class='notes'> Our attention spans are short, we are easily distracted. </aside>
 			</section>
 			
@@ -200,6 +210,7 @@ h1 {
 			<section>
 				<h2>Why Perceived Perf? 📖</h2>
 				<h3 class='fragment fade-up'>🧠 Because Psychology!</h3>
+				<p class='fragment fade-up'>(See previous presentation for perf ideas)</p>
 			</section>
 			<section>
 				<h3>Humans over-estimate passive waits by 36%</h3>
@@ -216,15 +227,17 @@ h1 {
 			<section>
 				<h2>Don't use a loading spinner</h2>
 				<img src='assets/barcelona/loading.gif'>
-				<aside class='notes'> TODO: Trainline loading animation </aside>
 			</section>
 			<section>
 				<h2>Use a branded loading animation</h2>
 				<br />
 				<img src='assets/barcelona/brandedLoading.gif'>
-				<aside class='notes'> TODO: Trainline loading animation </aside>
 			</section>
-			
+			<section>
+				<h2>Use 💀 skeleton for predictable layouts</h2>
+				<br />
+				<img src='assets/barcelona/skeleton.png'>
+			</section>
 			
 			<section>
 				<h3>Lots of short animations are perceived as long</h3>
@@ -324,7 +337,7 @@ h1 {
 					This will be useful because we know how slow websphere is right? </aside>
 			</section>
 			<section>
-				<div><a href='https://jakearchibald.com/2013/animated-line-drawing-svg/'>https://jakearchibald.com/2013/animated-line-drawing-svg/</a></div>
+				<div><a target="_blank" href='https://jakearchibald.com/2013/animated-line-drawing-svg/'>https://jakearchibald.com/2013/animated-line-drawing-svg/</a></div>
 			</section>
 			<section data-background-color="#fff">
 				<svg onclick="toggleDash(this)" class='half-width' version="1.1" viewBox="0 0 16 16">
@@ -357,20 +370,24 @@ h1 {
 				<p class='fragment fade-up'>When they fail they expose<br /> the unicode they were mapped to</p>
 			</section>
 			<section>
-				<h3>Which can fail too</h3>
+				<h3>Which can fail</h3>
 				<h3>  </h3>
-				<p>(bad for accessibility)</p>
+				<p>(bad for accessibility too)</p>
 			</section>
 			<section>
 				<aside class='notes'> Etsy horse </aside>
 				<h3>or display something completely unexpected...</h3>
 				<h3>⭐️️️️️️️️️⭐️⭐️️️️️️️️️⭐️🐴</h3>
+				<aside class='notes'>Etsy had a bug while ago because they use icon fonts</aside>
 			</section>
 
 			<section>
 				<h1>Use SVGs</h1>
 			</section>
-
+			
+			<section>
+				<h2>Misc speaker rant</h2>
+			</section>
 			<section>
 				<h2>Convert gifs to video</h2>
 				<br/>
@@ -383,6 +400,7 @@ h1 {
 						</video>
 					</code>
 				</pre>
+				<aside class='notes'>Verge wrote an article about the new inflated size of gifs supported on twitter. And then used a 17MB gif on their homepage.</aside>
 			</section>
 
 			<section>
